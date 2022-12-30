@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
     'jest/globals': true,
+    node: true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
@@ -25,4 +26,4 @@ module.exports = {
     'no-console': 'error',
     'react/prop-types': 0,
   },
-};
+}
