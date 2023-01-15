@@ -29,9 +29,11 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: Deploy proxy
-      - uses: superfly/flyctl-actions/setup-flyctl@master
+        uses: superfly/flyctl-actions/setup-flyctl@master
         with:
           run: flyctl deploy --remote-only
+      
+          
           
          
      
