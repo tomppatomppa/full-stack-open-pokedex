@@ -29,8 +29,13 @@ jobs:
           build: npm run build
           start: npm run start-prod
           wait-on: http://localhost:5000
-      - name: Deploy remote    
-        run: flyctl deploy --remote-only
+      - name: Deploy remote
+        with:
+           run: flyctl deploy --remote-only
+           healthcheck: "https://billowing-voice-2354.fly.dev/health"
+           checkstring: "ok"
+           rollbackonhealthcheckfailed: true
+       
           
             
           
