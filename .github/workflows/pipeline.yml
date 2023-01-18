@@ -34,7 +34,7 @@ jobs:
         with:
            run: flyctl deploy --remote-only
            healthcheck: "https://billowing-voice-2354.fly.dev/health"
-           checkstring: "ok"
+           checkstring: "fail"
            rollbackonhealthcheckfailed: true
        
           
