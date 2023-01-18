@@ -29,11 +29,11 @@ jobs:
           build: npm run build
           start: npm run start-prod
           wait-on: http://localhost:5000
-      - name: Deploy remote
+      - name: Deploy remote      
         run: flyctl deploy --remote-only
-      - name: Health
+      - name: Health        
+        uses: superfly/flyctl-actions/setup-flyctl@master
         with:
-           run: flyctl deploy --remote-only
            healthcheck: "https://billowing-voice-2354.fly.dev/health"
            checkstring: "fail"
            rollbackonhealthcheckfailed: true
